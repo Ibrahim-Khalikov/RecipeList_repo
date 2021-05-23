@@ -34,6 +34,10 @@ class DataService {
                     //sert unique id for each instance
                     for r in recipeData{
                         r.id = UUID()
+                        
+                        for i in r.ingredients {
+                            i.id=UUID()
+                        }
                     }
                     // set aunique id for each recipe in the  recipe data array
                     return recipeData
